@@ -8,13 +8,14 @@ export default class YearButton extends React.Component {
   constructor(props) {
     super(props);
 
+    this.years = [2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010];
+    
     this.toggle = this.toggle.bind(this);
     this.state = {
       dropdownOpen: false
     };
-    this.day = new Date().getDate();
-    this.month = new Date().getMonth() + 1;
-    this.year = new Date().getFullYear();
+    
+    YearButton.year = new Date().getFullYear();
   }
 
   toggle() {
@@ -29,17 +30,16 @@ export default class YearButton extends React.Component {
       <span>
       <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
         <DropdownToggle caret>
-          {this.year}
+          {YearButton.year}
         </DropdownToggle>
         <DropdownMenu>
-          <DropdownItem header>Header</DropdownItem>
-          <DropdownItem disabled>Action</DropdownItem>
-          <DropdownItem>Another Action</DropdownItem>
-          <DropdownItem divider />
-          <DropdownItem>Another Action</DropdownItem>
+        {this.years.map((num, index) => {
+                return <DropdownItem key = {index} onClick={()=>{YearButton.year=num}}>{num}</DropdownItem>
+            })}
         </DropdownMenu>
       </ButtonDropdown>
       </span>
+      
     )
 }
 }

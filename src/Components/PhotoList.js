@@ -9,7 +9,7 @@ export default function PhotoList(props) {
     const [photo, setPhoto] = useState([]);
     const [nDate, setNDate] = useState(`${new Date().getFullYear()}-0${new Date().getMonth() + 1}-${new Date().getDate()}`);
 
-    const changeDate = () => {setNDate(`${YearButton.year}-0${MonthButton.month.toLocaleString(undefined, {minimumIntegerDigits: 2})}-${DayButton.day.toLocaleString(undefined, {minimumIntegerDigits: 2})}`); console.log(nDate);};
+    const changeDate = () => {setNDate(`${YearButton.year}-${MonthButton.month.toLocaleString(undefined, {minimumIntegerDigits: 2})}-${DayButton.day.toLocaleString(undefined, {minimumIntegerDigits: 2})}`); console.log(nDate);};
 
     useEffect(() => {
 

@@ -18,8 +18,8 @@ export default function PhotoCard(props) {
         <CardBody>
         <DayButton /> <MonthButton /> <YearButton /> <span />
         <Button onClick={props.change}>Go</Button>
-          <CardTitle>Photo: {props.title}</CardTitle>
-          <CardSubtitle className="mb-4">{props.date}</CardSubtitle>
+          <CardTitle className="mt-2">Photo: {props.title}</CardTitle>
+          <CardSubtitle className="mb-2">{props.date}</CardSubtitle>
           <CardImg src={props.pic} alt="Card image cap" style={{width:"40%", height:"40rem"}}/>
           <CardText className="mt-4">{props.description}</CardText>        
         </CardBody>

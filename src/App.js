@@ -9,7 +9,7 @@ function App() {
   
   return (
     <div className="App">
-      <h1 style={{backgroundColor: "black", color: 'white', paddingBottom: '1%', marginBottom: '0%'}}>NASA Photo of the Day</h1>
+      <h1 style={{backgroundColor: "black", color: 'white', paddingBottom: '.5%', marginBottom: '0%'}}>NASA Photo of the Day</h1>
       <PhotoList />
     </div>
   );
